@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="icon" href="kikoy.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+
+</style>
+</head>
+<body>
+<!-- Tabs -->
+<nav class="w3-sidenav w3-black w3-animate-top w3-center w3-xxlarge" style="display:none;padding-top:150px" id="mySidenav">
+<a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-jumbo w3-display-topright" style="padding:6px 24px">
+  <i class="fa fa-remove"></i>
+</a>
+<a href="index.html" class="w3-text-grey w3-hover-black">Home</a>
+<a href="gallery.html" class="w3-text-grey w3-hover-black">Gallery</a>
+<a href="gmax.html" class="w3-text-white w3-hover-black">Gmax</a>
+<a href="javascript:void(0)" class="w3-text-grey w3-hover-black">Youtube Video</a>
+</nav>
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-container w3-padding-32 w3-center w3-opacity w3-margin-bottom">
+<span class="w3-opennav w3-xxlarge w3-right w3-margin-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<h1><b>MEMORIES OF 26/02/2017</b></h1>
+<p><b>I love you guys &#10084;</b></p>
+</header>
+<br>
+<br>
+<center><h1>HERE IS THE GMAX VIDEO</h1></center>
+<center><video controls class="center"><source src="GOPR7137.MP4" type="video/MP4"></video></center>
+
+
+<br>
+<br>
+
+<!-- Clock -->
+<center><font color="black"><font size="6"><script type="text/javascript">
+var tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function GetClock(){
+var d=new Date();
+var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+if(nyear<1000) nyear+=1900;
+
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=""+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+<div id="clockbox"></div></font></center>
+
+<script>
+// Open and close sidenav
+function w3_open() {
+  document.getElementById("mySidenav").style.width = "100%";
+  document.getElementById("mySidenav").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+<!-- end of clock function -->
+
+</body>
+</html>
